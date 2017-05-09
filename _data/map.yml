@@ -1,0 +1,12 @@
+-
+  en: en/_posts/2017-05-08-hello-world.md 
+  es: es/_posts/2017-05-08-hola-mundo.md
+  de: de/_posts/2017-05-08-hallo-welt.md
+-
+  en: index.html
+  es: es/index.html
+  de: de/index.html
+-
+  en: about.md
+  es: acerca.md
+  de: ubermich.md

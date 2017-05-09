@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+    <head>
+	{% include alternate.html %}
+    </head>
+    <body>
+	<h1>{{page.title}}</h1>
+	<div>
+	    <h2>Language nav menu</h2>
+	    {% include lang_nav.html %}
+	</div>
+	
+	<hr>
+	<h2>Content</h2>
+	{{ content }}
+
+	<hr>
+
+
+	<div>
+	    <h2>All Posts</h2>
+	    <ul>
+		{% for item in site.posts %}
+		<li>
+		    <a href="{{item.url}}" hreflang="{{item.lang}}">{{ item.title }} <strong>[{{item.lang}}]</strong></a>
+		</li>
+		{% endfor %}
+	    </ul>
+	</div>
+
+	<div>
+	    <h2>All Pages</h2>
+	    <ul>
+		{% for item in site.pages %}
+		<li>
+		    <a href="{{item.url}}" hreflang="{{item.lang}}">{{ item.title }} <strong>[{{item.lang}}]</strong></a>
+		</li>
+	    {% endfor %}
+	    </ul>
+	</div>
+    </body>
+</html>
+
